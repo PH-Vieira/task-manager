@@ -1,0 +1,47 @@
+.sidenav {
+  height: 100vh; /* full height */
+  width: 60px; /* width of the sidebar */
+  position: fixed; /* fixed sidebar */
+  z-index: 1; /* stay on top */
+  top: 0; /* stay at the top */
+  left: 0;
+  background-color: white;
+  overflow-x: hidden; /* disable horizontal scroll */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.sidenav button {
+  width: var(--navbarSize);
+  height: var(--navbarSize);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav button:hover {
+  cursor: pointer;
+}
+
+.sidenav button.active {
+  background-color: var(--orange2);
+}
+
+.sidenav .btn {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 500px) {
+  .sidenav {
+    width: calc(var(--navbarSize) - 10px); /* width of the sidebar */
+  }
+  .sidenav button {
+    width: calc(var(--navbarSize) - 10px);
+    height: calc(var(--navbarSize) - 10px);
+  }
+}
