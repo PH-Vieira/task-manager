@@ -42,7 +42,7 @@ class Conexao {
         try {
             $stmt = $conexao->prepare($query);
             $stmt->execute();
-            $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $data = $stmt->fetchAll(PDO::FETCH_NUM);
             return $data;
         } catch (PDOException $e) {
             return [
