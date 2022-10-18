@@ -10,7 +10,7 @@
                 <div>
                     Nível 
                     <select v-model="task.taskLevel">
-                        <option :value="index" v-for="(item, index) in niveis" :key="index">{{ item['descricao_nivel'] }}</option>
+                        <option :value="index" v-for="(item, index) in niveis" :key="index">{{ item[1] }}</option>
                     </select>
                 </div>
                 <button class="cardBtn">Adicionar</button>
